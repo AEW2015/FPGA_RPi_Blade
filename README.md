@@ -4,17 +4,20 @@ A affordable HPC FPGA platform with COTS parts.
 ## TODOs
 
 ### Before Launch
-  * List Parts
-  * link RPi XDMA
-  * XDMA Steaming Example
-  * XDMA Memory mapped option
-  * Simple Axi lite Option
+  * ~~List Parts~~
+  * ~~link RPi XDMA~~
+  * ~~XDMA Steaming Example~~
+  * ~~XDMA Memory mapped option~~
+  * ~~Simple Axi lite Option~~
   * Python SW for it
   * Litex Directory with repo with simple instructions
+  * Post Results
+  * Fill out README.md for each directory
 
 ### After Launch
-  * Add supporting IP to examples (Temp, Flash, Version, LEDs)
+  * Add supporting IP to examples (Temp, Flash, Version, LEDs, DDR)
   * Fix LiteX Driver Issue
+  * Dynamic Power Tester (overclocked BRAMs)
   * Add Platform support for examples
   * Try various Vitis Libraries Examples
   * Get Vitis AI working

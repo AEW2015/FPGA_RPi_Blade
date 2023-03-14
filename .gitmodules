@@ -1,0 +1,3 @@
+[submodule "xdma/rpi_driver/Saturn"]
+	path = xdma/rpi_driver/Saturn
+	url = https://github.com/laurencebarker/Saturn.git
