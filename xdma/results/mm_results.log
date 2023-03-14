@@ -1,0 +1,43 @@
+pi@ubuntu:~/xdma/tests$ sudo ./run_test.sh
+Info: Number of enabled h2c channels = 1
+Info: Number of enabled c2h channels = 1
+Info: The PCIe DMA core is memory mapped.
+Info: Running PCIe DMA memory mapped write read test
+      transfer size:  1024
+      transfer count: 1
+Info: Writing to h2c channel 0 at address offset 0.
+Info: Wait for current transactions to complete.
+/dev/xdma0_h2c_0 ** Average BW = 1024, 9.001644
+Info: Writing to h2c channel 0 at address offset 1024.
+Info: Wait for current transactions to complete.
+/dev/xdma0_h2c_0 ** Average BW = 1024, 11.088251
+Info: Writing to h2c channel 0 at address offset 2048.
+Info: Wait for current transactions to complete.
+/dev/xdma0_h2c_0 ** Average BW = 1024, 9.078497
+Info: Writing to h2c channel 0 at address offset 3072.
+Info: Wait for current transactions to complete.
+/dev/xdma0_h2c_0 ** Average BW = 1024, 9.853354
+Info: Reading from c2h channel 0 at address offset 0.
+Info: Wait for the current transactions to complete.
+/dev/xdma0_c2h_0 ** Average BW = 1024, 11.720405
+Info: Reading from c2h channel 0 at address offset 1024.
+Info: Wait for the current transactions to complete.
+/dev/xdma0_c2h_0 ** Average BW = 1024, 9.458973
+Info: Reading from c2h channel 0 at address offset 2048.
+Info: Wait for the current transactions to complete.
+/dev/xdma0_c2h_0 ** Average BW = 1024, 9.348610
+Info: Reading from c2h channel 0 at address offset 3072.
+Info: Wait for the current transactions to complete.
+/dev/xdma0_c2h_0 ** Average BW = 1024, 9.233128
+Info: Checking data integrity.
+Info: Data check passed for address range 0 - 1024.
+Info: Data check passed for address range 1024 - 2048.
+Info: Data check passed for address range 2048 - 3072.
+Info: Data check passed for address range 3072 - 4096.
+Info: All PCIe DMA memory mapped tests passed.
+Info: All tests in run_tests.sh passed.
+pi@ubuntu:~/xdma/tests$ cd ../tools/
+pi@ubuntu:~/xdma/tools$ sudo ./dma_to_device -s 262144 -c 1000
+/dev/xdma0_h2c_0 ** Average BW = 262144, 335.117126
+pi@ubuntu:~/xdma/tools$ sudo ./dma_from_device -s 262144 -c 1000
+/dev/xdma0_c2h_0 ** Average BW = 262144, 329.512146

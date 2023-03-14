@@ -1,0 +1,4 @@
+pi@ubuntu:~/fiate/host_sw$ sudo python3 ./performance_test.py 0x600000000
+0x600000000
+Write MBps is  1.081885077774522
+Read MBps is  1.5586460309060748

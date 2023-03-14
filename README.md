@@ -9,10 +9,10 @@ An affordable HPC FPGA platform with COTS parts.
   * ~~XDMA Steaming Example~~
   * ~~XDMA Memory mapped option~~
   * ~~Simple Axi lite Option~~
-  * Python SW for it
+  * ~~Python SW for it~~
   * Litex Directory with repo with simple instructions
-  * Post Results
-  * Fill out README.md for each directory
+  * ~~Post Results~~
+  * ~~Fill out README.md for each directory~~
 
 ### After Launch
   * Add supporting IP to examples (Temp, Flash, Version, LEDs, DDR)
@@ -32,3 +32,18 @@ An affordable HPC FPGA platform with COTS parts.
  * Compute Blade
    * Product Page [Link](https://computeblade.com/)
    * Kickstarter [Link](https://www.kickstarter.com/projects/uptimelab/compute-blade?ref=ae6z7n)
+
+## Examples
+
+### XDMA
+  * In Vivdao run `source src_proc.tcl'.
+  * Go to XDMA directory for more info
+
+### PCIe AXI Lite
+  * In Vivdao run `source src_proc.tcl'.
+  * Go to PCIe AXI Lite directory for more info
+
+### LiteX LitePCIe
+  * Go to LitePcie directory for more info
+
+

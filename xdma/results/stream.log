@@ -1,0 +1,31 @@
+pi@ubuntu:~/xdma/tests$ sudo ./run_test.sh
+Info: Number of enabled h2c channels = 1
+Info: Number of enabled c2h channels = 1
+Info: The PCIe DMA core is streaming.
+Info: Running PCIe DMA streaming test
+      transfer size:  1024
+      transfer count: 1
+Info: Only channels that have both h2c and c2h will be tested as the other
+      interfaces are left unconnected in the PCIe DMA example design.
+Info: DMA setup to read from c2h channel 0. Waiting on write data to channel 0.
+Info: Writing to h2c channel 0. This will also start reading data on c2h channel 0.
+Info: Wait the for current transactions to complete.
+/dev/xdma0_h2c_0 ** Average BW = 1024, 7.484560
+/dev/xdma0_c2h_0 ** Average BW = 1024, 0.123958
+Info: Checking data integrity.
+Info: Data check passed for c2h and h2c channel 0.
+Info: All PCIe DMA streaming tests passed.
+Info: All tests in run_tests.sh passed.
+pi@ubuntu:~/xdma/tests$ cd ../tools/
+pi@ubuntu:~/xdma/tools$ sudo ./dma_to_device -v -s 262144
+dev /dev/xdma0_h2c_0, addr 0x0, aperture 0x0, size 0x40000, offset 0x0, count 1
+host buffer 0x41000 = 0xffffb8892000
+#0: CLOCK_MONOTONIC 0.001047474 sec. write 262144 bytes
+** Avg time device /dev/xdma0_h2c_0, total time 1047474 nsec, avg_time = 1047474.000000, size = 262144, BW = 250.263016
+/dev/xdma0_h2c_0 ** Average BW = 262144, 250.263016
+pi@ubuntu:~/xdma/tools$ sudo ./dma_from_device -v -s 262144
+dev /dev/xdma0_c2h_0, addr 0x0, aperture 0x0, size 0x40000, offset 0x0, count 1
+host buffer 0x41000, 0xffffa2ae7000.
+#0: CLOCK_MONOTONIC 0.001224087 sec. read 262144/262144 bytes
+** Avg time device /dev/xdma0_c2h_0, total time 1224087 nsec, avg_time = 1224087.000000, size = 262144, BW = 214.154709
+/dev/xdma0_c2h_0 ** Average BW = 262144, 214.154709
