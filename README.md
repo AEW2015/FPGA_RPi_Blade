@@ -1,5 +1,5 @@
 # FPGA RPi Blade
-A affordable HPC FPGA platform with COTS parts. 
+An affordable HPC FPGA platform with COTS parts. 
 
 ## TODOs
 
