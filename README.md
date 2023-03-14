@@ -34,6 +34,9 @@ An affordable HPC FPGA platform with COTS parts.
    * Kickstarter [Link](https://www.kickstarter.com/projects/uptimelab/compute-blade?ref=ae6z7n)
 
 ## Examples
+Currently Built for Vivado 2019.1 (my favorite version)
+
+I will include other verions in the future, but it should be easy to port.
 
 ### XDMA
   * In Vivdao run `source src_proc.tcl'.
