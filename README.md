@@ -10,7 +10,7 @@ An affordable HPC FPGA platform with COTS parts.
   * ~~XDMA Memory mapped option~~
   * ~~Simple Axi lite Option~~
   * ~~Python SW for it~~
-  * Litex Directory with repo with simple instructions
+  * ~~Litex Directory with repo with simple instructions~~
   * ~~Post Results~~
   * ~~Fill out README.md for each directory~~
 
