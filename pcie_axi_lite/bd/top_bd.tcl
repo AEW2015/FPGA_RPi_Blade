@@ -221,8 +221,8 @@ proc create_root_design { parentCell } {
   # Create instance: pcie_7x_0, and set properties
   set pcie_7x_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:pcie_7x:3.3 pcie_7x_0 ]
   set_property -dict [ list \
-   CONFIG.Bar0_Scale {Megabytes} \
-   CONFIG.Bar0_Size {1} \
+   CONFIG.Bar0_Scale {Kilobytes} \
+   CONFIG.Bar0_Size {128} \
    CONFIG.Device_ID {7024} \
    CONFIG.IntX_Generation {false} \
    CONFIG.Interface_Width {128_bit} \
@@ -252,7 +252,7 @@ proc create_root_design { parentCell } {
   # Create instance: pcie_axi_lite_v1_0_0, and set properties
   set pcie_axi_lite_v1_0_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:pcie_axi_lite_v1_0:1.0 pcie_axi_lite_v1_0_0 ]
   set_property -dict [ list \
-   CONFIG.AXI_BAR_0_ADDR {0x40000000} \
+   CONFIG.AXI_BAR_0_ADDR {0x00000000} \
    CONFIG.AXI_BAR_0_MASK {0xFFF00000} \
    CONFIG.BIG_ENDIAN {"1"} \
  ] $pcie_axi_lite_v1_0_0
@@ -313,7 +313,7 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets pcie_axi_lite_v1_0_0_M_AXI] [get
   connect_bd_net -net xlconstant_0_dout [get_bd_ports pcie_clkreq] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00020000 -offset 0xC0000000 [get_bd_addr_spaces pcie_axi_lite_v1_0_0/M_AXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
+  create_bd_addr_seg -range 0x00020000 -offset 0x00000000 [get_bd_addr_spaces pcie_axi_lite_v1_0_0/M_AXI] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
 
 
   # Restore current instance
