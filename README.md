@@ -15,7 +15,11 @@ An affordable HPC FPGA platform with COTS parts.
   * ~~Fill out README.md for each directory~~
 
 ### After Launch
+  * Power Load test
+  * Add all 2019.1 releases
+  * Move to Vivado 2023.1 
   * Add supporting IP to examples (Temp, Flash, Version, LEDs, DDR)
+  * Board Files
   * Fix LiteX Driver Issue
   * Dynamic Power Tester (overclocked BRAMs)
   * Add Platform support for examples
