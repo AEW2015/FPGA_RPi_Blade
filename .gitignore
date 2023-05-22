@@ -1,4 +1,5 @@
 xdma/*_prj*/
 pcie_axi_lite/*_prj*/
+load_tester/*_prj*/
 load_tester/dcp_explore/
 plat/
