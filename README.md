@@ -15,8 +15,9 @@ An affordable HPC FPGA platform with COTS parts.
   * ~~Fill out README.md for each directory~~
 
 ### After Launch
-  * Power Load test
+  * ~~Power Load test~~
   * Add all 2019.1 releases
+  * Need Flash Firmware update (without need of JTAG)
   * Move to Vivado 2023.1 
   * Add supporting IP to examples (Temp, Flash, Version, LEDs, DDR)
   * Board Files
